@@ -1,0 +1,38 @@
+{
+  "name": "PokemonDesc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
+    "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
+    "start": "NODE_ENV=development webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rukomoynikov/PokemonDesc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rukomoynikov/PokemonDesc/issues"
+  },
+  "homepage": "https://github.com/Rukomoynikov/PokemonDesc#readme",
+  "devDependencies": {
+    "classnames": "^2.2.6",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.7",
+    "typescript": "^4.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
