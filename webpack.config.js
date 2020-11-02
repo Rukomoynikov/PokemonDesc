@@ -5,7 +5,7 @@ const NODE_ENV = process.env.NODE_ENV
 
 module.exports = {
   mode: NODE_ENV == 'development' ? 'development' : 'production',
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/index.ts'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
@@ -14,12 +14,18 @@ module.exports = {
     rules: [
       {
         test: /\.[tj]sx?$/,
+        exclude: /node_modules/,
         use: ['ts-loader']
       },
       {
-        test: /\.(s?)css$/,
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
         use: [
           'style-loader', 
+          'css-modules-typescript-loader?modules',
           {
             loader: 'css-loader',
             options: {
