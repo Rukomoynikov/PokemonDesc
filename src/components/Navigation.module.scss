@@ -1,0 +1,26 @@
+.navigation {
+  display: flex;
+
+  &__item {
+    font-family: Karla;
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &__item_active::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: black;
+    position: absolute;
+    display: block;
+    bottom: -14px;
+  }  
+
+  &__item:not(:last-child) {
+    margin-right: 50px
+  }
+}

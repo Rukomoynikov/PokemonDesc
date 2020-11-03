@@ -1,0 +1,18 @@
+.footer {
+  font-family: Karla;
+  font-size: 18px;
+  font-weight: 700;
+
+  padding-bottom: 33px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1125px;
+    margin: auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

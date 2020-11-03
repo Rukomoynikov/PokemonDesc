@@ -1,0 +1,14 @@
+.header {
+  background: #F5DB13;
+  box-shadow: 0px 4px 16px 0px #011C40 20%;
+  height: 93px;
+
+  &__wrapper {
+    max-width: 1125px;
+    margin: auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

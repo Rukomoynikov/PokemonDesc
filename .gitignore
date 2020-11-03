@@ -1,3 +1,6 @@
 node_modules
 dist
 .DS_Store
+
+src/**/**.d.ts
+!src/@types/**/*.*
