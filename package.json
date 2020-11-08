@@ -68,5 +68,9 @@
       "pretty-quick --staged",
       "eslint ./src"
     ]
+  },
+  "dependencies": {
+    "@types/react-router-dom": "^5.1.6",
+    "react-router-dom": "^5.2.0"
   }
 }
