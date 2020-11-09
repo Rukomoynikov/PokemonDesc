@@ -54,7 +54,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    alias: {
+      Components: path.resolve(__dirname, 'src/components/'),
+      Images: path.resolve(__dirname, 'src/images/'),
+    }
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -64,7 +68,8 @@ module.exports = {
   devServer: {
     port: 3000,
     open: true,
-    hot: true
+    hot: true,
+    historyApiFallback: true
   },
   devtool: 'source-map'
 }

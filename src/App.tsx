@@ -1,17 +1,27 @@
-import React from 'react'
-import cn from 'classnames'
+import React from "react";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-import style from './App.module.scss'
+import Layout from './components/Layout'
+import { Header } from './components/Header/'
+import { Footer } from './components/Footer/'
+import { HomePage } from './components/HomePage/'
+import { PokedexPage } from './components/PokedexPage/'
 
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
-
-export const App = () => {
+export default function App() {
   return (
-    <div className={cn(style.layout)}>
-      <Header />
-      <div className={cn(style.layout__content)} />
-      <Footer />
-    </div>
-  ) 
+    <BrowserRouter>
+      <Layout>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/pokedex" component={PokedexPage} />
+        </Switch>
+        <Footer />
+      </Layout>
+    </BrowserRouter>
+  );
 }
