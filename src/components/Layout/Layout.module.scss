@@ -1,0 +1,14 @@
+@import "./breakpoints";
+
+.root {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+
+  @include media(">tablet", "<desktop") {
+    padding: 0 20px;
+  }
+}

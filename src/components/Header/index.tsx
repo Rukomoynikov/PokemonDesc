@@ -3,8 +3,8 @@ import cn from 'classnames'
 
 import styles from './Header.module.scss'
 
-import logo from '../images/logo.svg';
-import { Navigation } from './Navigation'
+import logo from 'Images/logo.svg';
+import { Navigation } from 'Components/Navigation'
 
 export const Header = () => {
   return (

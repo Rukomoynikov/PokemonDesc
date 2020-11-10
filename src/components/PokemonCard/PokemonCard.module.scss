@@ -1,0 +1,29 @@
+.pokemonCard {
+  max-width: 350px;
+  filter: drop-shadow(4px 4px 4px rgba(33, 33, 33, 0.1));
+  background: #F6F7F9;
+  border-radius: 8px;
+  min-height: 136px;
+  width: calc(33% - 36px);
+  margin: 18px;
+  position: relative;
+  padding-left: 26px;
+  overflow: hidden;
+}
+
+.pokemonCard__img {
+  width: 232px;
+  height: 100%;
+  background-size: cover;
+  background-position-y: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: blue;
+  z-index: -1;
+}
+
+.pokemonCard__title {
+  color: #212121;
+  text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
+}

@@ -5,11 +5,7 @@ body {
 }
 
 .layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
-  &__content {
-    flex: 1;
+  &__descriptionSection {
+    max-width: 515px;
   }
 }

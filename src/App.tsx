@@ -1,17 +1,21 @@
-import React from 'react'
-import cn from 'classnames'
+import React from "react"
 
-import style from './App.module.scss'
+import Layout from './components/Layout'
+import { Content } from './components/Content/'
+import { Header } from './components/Header/'
+import { Footer } from './components/Footer/'
 
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
+import {useRoutes} from 'hookrouter'
+import {routes} from './config/routes.tsx'
 
-export const App = () => {
+export default function App() {
+  const routeResult = useRoutes(routes);
+
   return (
-    <div className={cn(style.layout)}>
+    <Layout>
       <Header />
-      <div className={cn(style.layout__content)} />
+      <Content>{routeResult}</Content>
       <Footer />
-    </div>
-  ) 
+    </Layout>
+  );
 }
