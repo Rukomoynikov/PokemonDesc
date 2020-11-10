@@ -2,9 +2,11 @@
 
 .root {
   width: 100%;
-  max-width: 1280px;
-  padding: 0 75px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
 
   @include media(">tablet", "<desktop") {
     padding: 0 20px;

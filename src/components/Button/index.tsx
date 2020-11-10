@@ -28,7 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
         type='button'>
           { children }
 
-          {fullWidth}
+          { fullWidth }
       </button>
     )
 }

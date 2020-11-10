@@ -1,6 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
-import { NavLink } from "react-router-dom";
+import { A } from 'hookrouter'
 
 import style from './Navigation.module.scss'
 
@@ -12,16 +12,16 @@ const menuItems = [
 export const Navigation = () => {
   return (
     <nav className={cn(style.navigation)}>
-      {menuItems.map((menuItem) => {
-        return (
-          <NavLink
-            to={menuItem.path}
-            activeClassName={style.navigation__item_active}
-            className={style.navigation__item}>
-            {menuItem.title}
-          </NavLink>
-        )
-      })}
+    {menuItems.map((menuItem) => {
+      return (
+        <A
+          key={menuItem.title}
+          className={style.navigation__item}
+          href={menuItem.path}>
+          {menuItem.title}
+        </A>
+      )
+    })}
     </nav>
   )
 }

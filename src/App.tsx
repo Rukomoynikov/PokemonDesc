@@ -1,27 +1,21 @@
-import React from "react";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-} from "react-router-dom";
+import React from "react"
 
 import Layout from './components/Layout'
+import { Content } from './components/Content/'
 import { Header } from './components/Header/'
 import { Footer } from './components/Footer/'
-import { HomePage } from './components/HomePage/'
-import { PokedexPage } from './components/PokedexPage/'
+
+import {useRoutes} from 'hookrouter'
+import {routes} from './config/routes.tsx'
 
 export default function App() {
+  const routeResult = useRoutes(routes);
+
   return (
-    <BrowserRouter>
-      <Layout>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/pokedex" component={PokedexPage} />
-        </Switch>
-        <Footer />
-      </Layout>
-    </BrowserRouter>
+    <Layout>
+      <Header />
+      <Content>{routeResult}</Content>
+      <Footer />
+    </Layout>
   );
 }
